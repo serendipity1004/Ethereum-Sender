@@ -14,11 +14,25 @@ import ProgressCarousel from './Carousel/ProgressCarousel';
 import Banner from './TextContainer/Banner';
 
 /**
+ * Paper
+ * */
+import TopBorderedPaper from './Paper/TopBorderedPaper';
+import CoinsContainer from './Paper/CoinsContainer';
+
+/**
+ * News
+ * */
+import NewsContainer from './News/NewsContainer';
+
+/**
  * Export Everything
  * */
 
 export {
     ResponsiveDrawer,
     ProgressCarousel,
-    Banner
+    Banner,
+    TopBorderedPaper,
+    NewsContainer,
+    CoinsContainer
 }

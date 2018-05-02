@@ -9,16 +9,23 @@
     "history": "^4.7.2",
     "material-ui": "^1.0.0-beta.35",
     "material-ui-icons": "^1.0.0-beta.35",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
+    "react-tradingview-widget": "^1.2.5",
     "redux": "^3.7.2",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
     "web3": "^1.0.0-beta.34"
+  },
+  "proxy": {
+    "/api/*": {
+      "target": "http://127.0.0.1:8000"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
