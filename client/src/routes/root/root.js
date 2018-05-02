@@ -131,7 +131,7 @@ const styles = theme => ({
     statVal: {},
     toolbar: theme.mixins.toolbar,
     chartContainer: {
-        height: 500
+        height: '100%'
     },
     paper: {
         position: 'absolute',

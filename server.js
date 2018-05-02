@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const envResult = require('dotenv').config();
 const {createLogger, format, transports} = require('winston');
 const {combine, timestamp, label, prettyPrint} = format;
+const axios = require('axios');
 const CONFIGS = process.env.ENV === 'prod' ?
     require('./configs/production') :
     process.env.ENV === 'dev' ?
@@ -49,6 +50,24 @@ app.use(expressSession({
             maxAge: CONFIGS.SESSION_LIFE
         }
 }));
+
+app.get('/api/top-coins', async (req, res) => {
+    try{
+        let response = await axios.get('https://chasing-coins.com/api/v1/top-coins/50');
+
+        let arrayfy = [];
+
+        let keys = Object.keys(response.data);
+
+        for(let i =0; i < keys.length; i++) {
+            arrayfy.push(response.data[keys[i]]);
+        }
+
+        res.json({success: true, data: {coins: arrayfy}});
+    }catch(e){
+        res.json({success:false})
+    }
+});
 
 /**
  * Start

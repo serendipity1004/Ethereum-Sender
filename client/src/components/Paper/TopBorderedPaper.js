@@ -14,8 +14,10 @@ import pink from 'material-ui/colors/pink';
 const styles = theme => ({
     root: {
         width: '100%',
-        height: 'inherit',
+        height: '100%',
+        maxHeight:'calc(100vh - 100px)',
         padding: 16,
+        overflowY:'scroll'
     },
     paperRoot: {
         width: '100%',
